@@ -7,7 +7,7 @@
     "test": "npm run build-private-lib && npm run build-lib-wrapper && npm run run-consumer-app",
     "build-private-lib": "cd private-lib && npm i && npm run build",
     "build-lib-wrapper": "cd lib-wrapper && npm i && npm run build",
-    "run-consumer-app": "npm i ./lib-wrapper/dist.tgz --no-save && node consumer-app/index.js"
+    "run-consumer-app": "npm i ./lib-wrapper/lib-wrapper-0.0.1.tgz --no-save && node consumer-app/index.js"
   },
   "keywords": [],
   "author": "",

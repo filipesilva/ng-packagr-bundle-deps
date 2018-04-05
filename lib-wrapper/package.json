@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "npm i ../private-lib/dist.tgz --no-save && ng-packagr -p ng-package.json"
+    "build": "npm i ../private-lib/dist.tgz --no-save && ng-packagr -p ng-package.json && npm run pack-with-bundled-deps",
+    "pack-with-bundled-deps": "cd dist && npm i ../../private-lib/dist.tgz --no-save && cd ../ && npm pack dist/"
   },
   "devDependencies": {
     "@angular/compiler": "^5.2.9",
@@ -13,5 +14,8 @@
     "tsickle": "^0.27.5",
     "tslib": "^1.9.0",
     "typescript": "~2.6.2"
-  }
+  },
+  "bundledDependencies": [
+    "private-lib"
+  ]
 }
