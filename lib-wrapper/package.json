@@ -1,0 +1,17 @@
+{
+  "name": "lib-wrapper",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "npm i ../private-lib/dist.tgz --no-save && ng-packagr -p ng-package.json"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^5.2.9",
+    "@angular/compiler-cli": "^5.2.9",
+    "@angular/core": "^5.2.9",
+    "ng-packagr": "2.4.1",
+    "tsickle": "^0.27.5",
+    "tslib": "^1.9.0",
+    "typescript": "~2.6.2"
+  }
+}
